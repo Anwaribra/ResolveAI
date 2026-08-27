@@ -18,11 +18,15 @@ class GeminiProvider(LLMProvider):
 
     def _get_client(self):
         if self._client is None:
+            if not self.api_key or self.api_key.startswith("your_"):
+                logger.warning("No valid Gemini API key configured, using mock mode.")
+                return None
             try:
                 from google import genai
                 self._client = genai.Client(api_key=self.api_key)
-            except ImportError:
-                logger.warning("google-genai SDK not installed, using fallback mock mode.")
+            except Exception as e:
+                logger.warning("Could not initialize google-genai Client (%s), using mock mode.", e)
+                return None
         return self._client
 
     async def generate_text(self, prompt: str, system_instruction: str | None = None) -> str:
