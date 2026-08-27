@@ -273,25 +273,6 @@ ResolveAI/
 
 ---
 
-## 14. Status Breakdown
-
-| Feature / Component | Status | Description |
-| :--- | :---: | :--- |
-| Project Monorepo Structure | **Implemented** | Full modular architecture and directories. |
-| Docker Compose Setup | **Implemented** | Postgres + pgvector, API, Dashboard setup. |
-| Warehouse OLTP Schema | **Implemented** | Full PostgreSQL DDL (`schema.sql`). |
-| dbt Star Schema Models | **Implemented** | Staging, intermediate, and marts models. |
-| LLM Provider Abstraction | **Implemented** | Base interface with Gemini & OpenRouter adapters. |
-| Risk-Aware Decision Engine | **Implemented** | Deterministic auto-resolution governance. |
-| Evaluation Metrics Harness | **Implemented** | Safety metrics including False Auto-Resolution Rate. |
-| Ingestion Interface | **Implemented** | `TicketSource` base class & Gmail connector stub. |
-| FastAPI REST Endpoints | **Implemented** | Health, ticket ingestion, and prediction status APIs. |
-| Streamlit Dashboard | **Implemented** | Operational metrics & escalation UI foundation. |
-| Live Gmail OAuth Sync | *Planned* | Full OAuth2 authentication workflow. |
-| Production Airflow Celery | *Future* | Multi-worker distributed execution setup. |
-
----
-
-## 15. License
+## 14. License
 
 Licensed under the [MIT License](LICENSE).
