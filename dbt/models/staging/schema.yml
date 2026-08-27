@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: resolveai
+    schema: public
+    tables:
+      - name: customers
+      - name: products
+      - name: tickets
+      - name: ticket_messages
+      - name: ticket_events
+      - name: ai_predictions
+      - name: resolutions
+      - name: escalations
+
+models:
+  - name: stg_tickets
+    description: "Staged raw support ticket records"
+    columns:
+      - name: ticket_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_ai_predictions
+    description: "Staged AI prediction audit records"
+    columns:
+      - name: prediction_id
+        tests:
+          - unique
+          - not_null

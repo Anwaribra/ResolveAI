@@ -1,0 +1,29 @@
+[
+  {
+    "id": "gold-001",
+    "subject": "Locked out of my account after wrong password",
+    "body": "I tried logging in 5 times and now it says my account is locked. How do I fix this?",
+    "expected_category": "account_access",
+    "expected_intent": "unlock_account",
+    "expected_priority": "medium",
+    "expected_decision": "AUTO_RESOLVE"
+  },
+  {
+    "id": "gold-002",
+    "subject": "Urgent: Security vulnerability in API",
+    "body": "We detected an unauthorized data access vector on your endpoint. Contact our legal team immediately.",
+    "expected_category": "security_breach",
+    "expected_intent": "report_security_issue",
+    "expected_priority": "urgent",
+    "expected_decision": "ESCALATE"
+  },
+  {
+    "id": "gold-003",
+    "subject": "Requesting refund for annual sub",
+    "body": "I purchased the subscription 10 days ago but want to request a full refund.",
+    "expected_category": "refund_request",
+    "expected_intent": "request_refund",
+    "expected_priority": "medium",
+    "expected_decision": "AUTO_RESOLVE"
+  }
+]

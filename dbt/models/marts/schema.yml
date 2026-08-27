@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Customer dimensional model"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_product
+    description: "Product dimensional model"
+  - name: dim_category
+    description: "Category and risk taxonomy model"
+  - name: fact_ticket
+    description: "Fact table for ticket lifecycle and volume tracking"
+    columns:
+      - name: ticket_id
+        tests:
+          - unique
+          - not_null
+  - name: fact_ai_prediction
+    description: "Fact table for AI predictions and confidence auditing"
+    columns:
+      - name: prediction_id
+        tests:
+          - unique
+          - not_null
+  - name: fact_resolution
+    description: "Fact table for ticket resolutions"
+  - name: fact_escalation
+    description: "Fact table for human escalations"

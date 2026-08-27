@@ -1,0 +1,12 @@
+resolveai:
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('POSTGRES_HOST', 'localhost') }}"
+      user: "{{ env_var('POSTGRES_USER', 'resolveai') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD', 'resolveai_secret') }}"
+      port: 5432
+      dbname: "{{ env_var('POSTGRES_DB', 'resolveai_db') }}"
+      schema: public
+      threads: 4
+  target: dev

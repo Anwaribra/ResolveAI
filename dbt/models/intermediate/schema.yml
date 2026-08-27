@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: int_ticket_lifecycles
+    description: "Intermediate model joining ticket state and AI prediction lifecycle events"
+    columns:
+      - name: ticket_id
+        tests:
+          - unique
+          - not_null
